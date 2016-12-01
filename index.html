@@ -1,0 +1,167 @@
+<!doctype HTML>
+
+<html>
+	<head>
+	<!--- 
+	Aquae Speculo (glass of water) = Brand??
+	-->
+		<title>Home - Aquae Speculo</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/mobile.css">
+	</head>
+	<body>
+	<!--- Header starts -->
+		<header>
+		<!--
+		Person header starts here, displays help, contact
+		and cart info
+		-->
+			<div id="personal">
+				<div class="content">
+				<!-- Links user might find useful -->
+					<div class="helpnav">
+						<ul>
+							<li>
+								<a href="help.html">Help</a>
+							</li>
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- "Useful" links end -->
+					<div id="helpnav" class="helpnav-right">
+						<!-- Current cart info -->
+						<ul id="cartContent">
+							<li class="cartinfo">
+								<a>Cart
+									<span id="cartAmount">0</span>
+								</a>
+								<ul>
+									<div id="cartItems">
+										<li>
+											<span class="cartItem">
+												<span class="cartItem-right">
+													<button>X</button>
+												</span>
+												
+												<span class="cartItem-left">
+													<img src="http://placehold.it/50x50"/>
+													<span class="cartItem-info">
+														<span>Item 1</span>
+														<span>&pound;1.02</span>
+													</span>
+												</span>
+											</span>
+										</li>
+									</div>
+									
+									<li class="line"></li>
+
+									<a href="cart.html">
+										<li id="viewCart">
+											<span>
+												View Cart
+											</span>
+										</li>
+									</a>
+								</ul>
+							</li>
+
+							<!-- Don't know If im going to keep this...
+							Would change when user is logged in to allow them to see their purchase history etc..
+							<li class="userinfo">
+								<a href="#">Sign in/join</a>
+							</li>
+							<! end user info -->
+						</ul>
+						<!-- End of cart info -->
+					</div>
+				</div>
+			</div>
+			<!--- Personal Navigation end -->
+
+			<!-- Main navigation, for products / different pages customers will be interested in -->
+			<nav>
+				<div class="content">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="#">Item 3</a></li>
+						<li><a href="#">Item 4</a></li>
+						<li><a href="#">Item 5</a></li>
+						<li><a href="#">Item 6</a></li>
+						<li><a href="#">Item 7</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- Navigation End -->
+		</header>
+		<!--- Header ends -->
+
+		<div id="maincontent">
+			<section>
+				<div class="slideshow">
+					<!-- TODO: Dynamically allow slideshows via JavaScript/JQuery -->
+					<div id="slides" class="slides">
+
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="content">
+					<article>
+						<p>Hello</p>
+						<p onclick="warningAlert('Test alert kek')">Click for warning</p>
+						<p onclick="successAlert('Test success kek')">Click for alert</p>
+						<br/>
+					</article>
+					<article id="purchaseable-items">
+					</article>
+				</div>
+			</section>
+		</div>
+		
+		<!-- my footer -->
+		<footer>
+			<!-- Simple alert -->
+			<div class="alert" id="alert">
+				<h1 id="alert_title">Alert</h1>
+				<p id="alert_message">My Message</p>
+			</div>
+			<!-- End simple alert -->
+			
+			<div class="content">
+				<!-- Social links -->
+				<p id="social">
+					<span>Find us on...</span>
+					<a href="#"><img src="images/youtube.png" width="30" height="30" style="padding-left: 55px;" />YouTube</a>
+					<a href="#"><img src="images/facebook.png" width="30" height="30" style="padding-left: 60px;" />Facebook</a>
+					<a href="#"><img src="images/twitter.png" width="30" height="30" style="padding-left: 45px;" />Twitter</a>
+				</p>
+				<!-- End social links -->
+				<!-- Copyright notice -->
+				<p id="copyright">
+					<span id="credit">&copy; Some Company 2015. All Rights Reserved</span>
+				</p>
+				<!-- end copyright notice -->
+			</div>
+		</footer>
+		<!-- End footer -->
+		<!-- JQuery. Amr doesn't want us using jQuery so, just going to comment it out for the time being :D
+		<script src="js/jquery-2.1.4.js"></script>
+		-->
+
+		<!-- 
+			Load my javascript files.
+			Bottom of page = faster loading for client :D
+		 -->
+		<script src="js/config.js"></script>
+		<script src="js/main.js"></script> <!-- Main js file. Has proto extensions and util methods -->
+		<script src="js/slideshow.js"></script> <!-- JS file for slideshow -->
+		<script src="js/shopping.js"></script> <!-- JS file for the shopping functionality -->
+	</body>
+</html>

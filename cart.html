@@ -1,0 +1,240 @@
+<!doctype HTML>
+
+<html>
+	<head>
+	<!--- 
+	Aquae Speculo (glass of water) = Brand??
+	-->
+		<title>Cart - Aquae Speculo</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/mobile.css">
+	</head>
+	<body>
+	<!--- Header starts -->
+		<header>
+		<!--
+		Person header starts here, displays help, contact
+		and cart info
+		-->
+			<div id="personal">
+				<div class="content">
+				<!-- Links user might find useful -->
+					<div class="helpnav">
+						<ul>
+							<li>
+								<a href="help.html">Help</a>
+							</li>
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- "Useful" links end -->
+					<div id="helpnav" class="helpnav-right">
+						<!-- Current cart info -->
+						<ul id="cartContent">
+							<li class="cartinfo">
+								<a>Cart
+									<span id="cartAmount">0</span>
+								</a>
+								<ul>
+									<div id="cartItems">
+										<li>
+											<span class="cartItem">
+												<span class="cartItem-right">
+													<button>X</button>
+												</span>
+												
+												<span class="cartItem-left">
+													<img src="http://placehold.it/50x50"/>
+													<span class="cartItem-info">
+														<span>Item 1</span>
+														<span>&pound;1.02</span>
+													</span>
+												</span>
+											</span>
+										</li>
+									</div>
+									
+									<li class="line"></li>
+
+									<li id="viewCart">
+										<span>
+											<a href="#">View Cart</a>
+										</span>
+									</li>
+								</ul>
+							</li>
+
+							<!-- Don't know If im going to keep this...
+							Would change when user is logged in to allow them to see their purchase history etc..
+							<li class="userinfo">
+								<a href="#">Sign in/join</a>
+							</li>
+							<! end user info -->
+						</ul>
+						<!-- End of cart info -->
+					</div>
+				</div>
+			</div>
+			<!--- Personal Navigation end -->
+
+			<!-- Main navigation, for products / different pages customers will be interested in -->
+			<nav>
+				<div class="content">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="#">Item 3</a></li>
+						<li><a href="#">Item 4</a></li>
+						<li><a href="#">Item 5</a></li>
+						<li><a href="#">Item 6</a></li>
+						<li><a href="#">Item 7</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- Navigation End -->
+		</header>
+		<!--- Header ends -->
+
+		<div id="maincontent">
+			<section>
+				<div class="content">
+					<article id="myCart">
+						<table class="basket">
+							<thead>
+								<th class="description-title">Items</th>
+								<th class="">Price</th>
+								<th class="">Quantity</th>
+								<th class="subtotal-title">Subtotal</th>
+								<th class="">&nbsp;</th>
+							</thead>
+							<tbody id="basketBody">
+								<!-- Example
+								<tr id="Product Name">
+									<td>
+										<div class="media">
+											<div class="m-1">
+												<img src="http://placehold.it/70x70" />
+											</div>
+											<div class="m-main">
+												<p><a href="#">Product Name</a></p>
+											</div>
+										</div>
+									</td>
+									<td>
+										<span class="price">&pound;1.20</span>
+									</td>
+									<td>
+										<input data-item="Product Name" class="quantity-number" type="number" min="1" value="10" onchange="updatePage(this)"/>
+									</td>
+									<td>
+										<span class="price subtotal">&pound;120</span>
+									</td>
+									<td>
+										<a data-name="Product name" onclick="removeFromPage(this);" style="color: #ff1a1a;" href="#">REMOVE</a>
+									</td> 
+								</tr> -->
+
+							</tbody>
+							<tfoot>
+								<td class="basket-amount-label" colspan="3">Total:</td>
+								<td class="basket-amount-value" id="totalCost" data-total="10.00">&pound;10.00</td>
+								<td>&nbsp;</td>
+							</tfoot>
+						</table>
+					</article>
+				</div>
+			</section>
+		</div>
+		
+		<!-- my footer -->
+		<footer>
+			<!-- Simple alert -->
+			<div class="alert" id="alert">
+				<h1 id="alert_title">Alert</h1>
+				<p id="alert_message">My Message</p>
+			</div>
+			<!-- End simple alert -->
+			
+			<div class="content">
+				<!-- Social links -->
+				<p id="social">
+					<span>Find us on...</span>
+					<a href="#"><img src="images/youtube.png" width="30" height="30" style="padding-left: 55px;" />YouTube</a>
+					<a href="#"><img src="images/facebook.png" width="30" height="30" style="padding-left: 60px;" />Facebook</a>
+					<a href="#"><img src="images/twitter.png" width="30" height="30" style="padding-left: 45px;" />Twitter</a>
+				</p>
+				<!-- End social links -->
+				<!-- Copyright notice -->
+				<p id="copyright">
+					<span id="credit">&copy; Some Company 2015. All Rights Reserved</span>
+				</p>
+				<!-- end copyright notice -->
+			</div>
+		</footer>
+		<!-- End footer -->
+		<!-- JQuery. Amr doesn't want us using jQuery so, just going to comment it out for the time being :D
+		<script src="js/jquery-2.1.4.js"></script>
+		-->
+
+		<!-- 
+			Load my javascript files.
+			Bottom of page = faster loading for client :D
+		 -->
+		<script src="js/main.js"></script> <!-- Main js file. Has proto extensions and util methods -->
+		<script src="js/shopping.js"></script> <!-- JS file for the shopping functionality -->
+		<script>
+			for (var i = shoppingCart.items.length - 1; i >= 0; i--) {
+				console.log("adding item");
+				var item = shoppingCart.items[i];
+				var appendTo = document.getElementById("basketBody");
+
+				appendTo.innerHTML += getMyHtml(item);
+
+				console.log("added item");
+			}
+
+			document.getElementById("totalCost").innerHTML = "&pound;" + getTotalPrice();
+
+			function updatePage(e){
+				var productName = e.getAttribute("data-item");
+
+				console.log(e.value);
+                if (e.value <= 0)
+                    e.value = 1;
+
+				setItemQuantity(productName, parseInt(e.value));
+
+				var rootBit = document.getElementById(productName);
+				var subtotals = rootBit.getElementsByClassName("subtotal");
+				for (var i = subtotals.length - 1; i >= 0; i--) {
+					subtotals[i].innerHTML = "&pound;" + (getPrice(productName)*e.value).toFixed(2);
+				}
+
+				document.getElementById("totalCost").innerHTML = "&pound;" + getTotalPrice();
+			}
+
+			function removeFromPage(e){
+				var productName = e.getAttribute("data-name");
+				removeItem(productName);
+				var productData = document.getElementById(productName);
+				productData.parentElement.removeChild(productData);
+
+				document.getElementById("totalCost").innerHTML = "&pound;" + getTotalPrice();
+			}
+
+			function getMyHtml(item){
+				var html = "<tr id=\"{0}\"><td><div class=\"media\"><div class=\"m-1\"><img width=\"70\" height=\"70\" src=\"http://placehold.it/70x70\" /></div>"+
+							"<div class=\"m-main\"><p><a href=\"#\">{0}</a></p></div></div></td><td><span class=\"price\">&pound;{1}</span>"+
+							"</td><td><input data-item=\"{0}\" type=\"number\" min=\"1\" value=\"{2}\" onchange=\"updatePage(this)\"/>"+
+							"</td><td><span class=\"price subtotal\">&pound;{3}</span></td><td><a data-name=\"{0}\" onclick=\"removeFromPage(this);\" style=\"color: #ff1a1a;\" href=\"#\">REMOVE</a></td></tr>";
+
+				html = html.format(item.name, item.price, item.quantity, (item.price * item.quantity).toFixed(2));
+				return html;
+			}
+		</script>
+	</body>
+</html>

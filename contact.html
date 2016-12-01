@@ -1,0 +1,262 @@
+<!doctype HTML>
+
+<html>
+	<head>
+	<!--- 
+	Aquae Speculo (glass of water) = Brand??
+	-->
+		<title>Contact Us - Aquae Speculo</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/mobile.css">
+	</head>
+	<body>
+	<!--- Header starts -->
+		<header>
+		<!--
+		Person header starts here, displays help, contact
+		and cart info
+		-->
+			<div id="personal">
+				<div class="content">
+				<!-- Links user might find useful -->
+					<div class="helpnav">
+						<ul>
+							<li>
+								<a href="help.html">Help</a>
+							</li>
+							<li>
+								<a href="#">Contact</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- "Useful" links end -->
+					<div id="helpnav" class="helpnav-right">
+						<!-- Current cart info -->
+						<ul id="cartContent">
+							<li class="cartinfo">
+								<a>Cart
+									<span id="cartAmount">0</span>
+								</a>
+								<ul>
+									<div id="cartItems">
+										<li>
+											<!--
+											<span class="cartItem">
+												<span class="cartItem-right">
+													<button>X</button>
+												</span>
+												
+												<span class="cartItem-left">
+													<img src="http://placehold.it/50x50"/>
+													<span class="cartItem-info">
+														<span>Item 1</span>
+														<span>&pound;1.02</span>
+													</span>
+												</span>
+											</span>-->
+										</li>
+									</div>
+									
+									<li class="line"></li>
+
+									<li id="viewCart">
+										<span>
+											<a href="cart.html">View Cart</a>
+										</span>
+									</li>
+								</ul>
+							</li>
+
+							<!-- Don't know If im going to keep this...
+							Would change when user is logged in to allow them to see their purchase history etc..
+							<li class="userinfo">
+								<a href="#">Sign in/join</a>
+							</li>
+							<! end user info -->
+						</ul>
+						<!-- End of cart info -->
+					</div>
+				</div>
+			</div>
+			<!--- Personal Navigation end -->
+
+			<!-- Main navigation, for products / different pages customers will be interested in -->
+			<nav>
+				<div class="content">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="#">Item 3</a></li>
+						<li><a href="#">Item 4</a></li>
+						<li><a href="#">Item 5</a></li>
+						<li><a href="#">Item 6</a></li>
+						<li><a href="#">Item 7</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- Navigation End -->
+		</header>
+		<!--- Header ends -->
+
+		<div id="maincontent">
+			<section>
+				<div class="content">
+					<section>
+						<article class="col1">
+							<h1 class="green">Reach Us</h1>
+							<p>Please contact us using the form on the right side if you have any questions or requests, conserning our services.</p>
+							<p>We will try and respond to your message within 24 hours.</p>
+							<p>Below you can fin a quick roadmap to our office</p>
+						</article>
+						<article class="col2">
+							<h1 class="blue">General</h1>
+							<p><b>Some Company</b></p>
+							<code>Building<br/>Srteet<br/>United Kingdom</code>
+							<p>Phone: <span id="phone">Sorry, we cannot use your location to get the phone number of our nearest support desk.</span></p>
+							<p>Email: <span class="mono"><a href="mailto:admin@AquaeSpeculo.com" data-name="Admin" data-email="admin@AquaeSpeculo.com">admin@AquaeSpeculo.com</a></span>
+						</article>
+						<article class="col3">
+							<h1 class="red">Mail Us</h1>
+							<form>
+								<p><label for="name">Name</label></p>
+								<input type="text" id="name" placehold="John Doe">
+								<p><label for="email">Email</label></p>
+								<input type="email" id="email" placehold="johndoe@example.com">
+								<p><label for="message">Message</label></p>
+								<textarea id="message" style="max-width: 100%;"></textarea>
+								<p></p>
+								<button type="submit">Send</button>
+							</form>
+						</article>
+					</section>
+					<article>
+						<h1 class="grey">Roadmap</h1>
+						<small id="warning">This requires you to have JavaScript installed and you need to be connected to the internet. If you cannot see the map, please check these things first.</small>
+						<div id="map" style="height: 300px; width: 100%;"></div>
+					</article>
+				</div>
+			</section>
+		</div>
+		
+		<!-- my footer -->
+		<footer>
+			<!-- Simple alert -->
+			<div class="alert" id="alert">
+				<h1 id="alert_title">Alert</h1>
+				<p id="alert_message">My Message</p>
+			</div>
+			<!-- End simple alert -->
+			
+			<div class="content">
+				<!-- Social links -->
+				<p id="social">
+					<span>Find us on...</span>
+					<a href="#"><img src="images/youtube.png" width="30" height="30" style="padding-left: 55px;" />YouTube</a>
+					<a href="#"><img src="images/facebook.png" width="30" height="30" style="padding-left: 60px;" />Facebook</a>
+					<a href="#"><img src="images/twitter.png" width="30" height="30" style="padding-left: 45px;" />Twitter</a>
+				</p>
+				<!-- End social links -->
+				<!-- Copyright notice -->
+				<p id="copyright">
+					<span id="credit">&copy; Some Company 2015. All Rights Reserved</span>
+				</p>
+				<!-- end copyright notice -->
+			</div>
+		</footer>
+		<!-- End footer -->
+		<!-- JQuery. Amr doesn't want us using jQuery so, just going to comment it out for the time being :D
+		<script src="js/jquery-2.1.4.js"></script>
+		-->
+
+		<!-- 
+			Load my javascript files.
+			Bottom of page = faster loading for client :D
+		 -->
+		<script src="js/main.js"></script> <!-- Main js file. Has proto extensions and util methods -->
+		<script src="js/shopping.js"></script> <!-- JS file for the shopping functionality -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT4EVcYWGR9iy2SCRzgVAxUKOGquVhLGY&callback=initMap"></script>
+		<script>
+			//Example phone numbers that will change with the users' location (only supports UK, Ireland, US)
+			var numbers = {uk:"0800 1111", ie:"085 5 555 5555", us:"555-555-5555"};
+			var ourLatLng = {lat: 53.2249397, lng : -0.542764};
+			var phoneEle = document.getElementById("phone");
+			
+			function initMap(){
+				if(navigator.geolocation){
+					navigator.geolocation.getCurrentPosition(function(position){
+						//Successful?
+						var geocoder = new google.maps.Geocoder();
+						var latlang = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+						var number = "Sorry, we're not available in your country";
+						geocoder.geocode({"location" : latlang }, function(result, status){
+							if (status == google.maps.GeocoderStatus.OK){
+								if (result[0]){
+									var loc = getCountry(result);
+									console.log(loc);
+									if (loc == "GB" || loc == "United Kingdom"){
+										number = numbers['uk'];
+									}else if(loc == "IE" || loc == "Ireland"){
+										number = numbers['ie'];
+									}else if (loc == "US" || loc == "United States of America"){
+										number = numbers['us'];
+									}
+									phoneEle.innerHTML = number;
+								}
+							}else{
+								phoneEle.innerHTML = "Sorry, couldn't find your location.";
+							}
+						});
+
+						map = new google.maps.Map(document.getElementById("map"), {
+							center : ourLatLng,
+							scrollWheel: false,
+							zoom : 13
+						});
+						var directionsDisplay = new google.maps.DirectionsRenderer({
+							map: map
+						});
+
+						// Set destination, origin and travel mode.
+					  	var request = {
+					    	destination: ourLatLng,
+					    	origin: latlang,
+					    	travelMode: google.maps.TravelMode.DRIVING
+					  	};
+					  	  // Pass the directions request to the directions service.
+						var directionsService = new google.maps.DirectionsService();
+  						directionsService.route(request, function(response, status) {
+    						if (status == google.maps.DirectionsStatus.OK) {
+      							// Display the route on the map.
+      							directionsDisplay.setDirections(response);
+    						}
+  						});
+
+						console.log("Successful");
+						document.getElementById("warning").innerHTML = "Directions:";
+
+					});
+					document.getElementById("warning").innerHTML = "";
+				}else{
+					phoneEle.innerHTML = "Sorry, we cannot use your location to get the phone number of our nearest support desk.";
+				}
+			}
+
+			function getCountry(result){
+				for (var i = 0; i < result[0].address_components.length; i++){
+					var shortname = result[0].address_components[i].short_name;
+					var longname = result[0].address_components[i].long_name;
+					var type = result[0].address_components[i].types;
+					if (type.indexOf("country") != -1){
+						if (shortname)
+							return shortname;
+						else
+							return longname;
+					}
+				}
+			}
+
+		</script>
+	</body>
+</html>
